@@ -41,6 +41,8 @@ public class FormularioActivity extends Activity {
                 report.saveInBackground();
 
                 Toast.makeText(FormularioActivity.this, "Denuncia Registrada", Toast.LENGTH_SHORT).show();
+
+                FormularioActivity.this.finish();
             }
         });
     }

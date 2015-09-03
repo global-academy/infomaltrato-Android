@@ -20,6 +20,6 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_informacion_aplicacion">InformacionAplicacion</string>
-    <string name="title_activity_formulario">FormularioActivity</string>
-    <string name="title_activity_denuncias">DenunciasActivity</string>
+    <string name="title_activity_formulario">Denuncia</string>
+    <string name="title_activity_denuncias">Denuncias</string>
 </resources>

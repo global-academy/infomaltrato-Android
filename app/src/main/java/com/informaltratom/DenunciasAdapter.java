@@ -22,10 +22,10 @@ public class DenunciasAdapter extends ArrayAdapter<Denuncia> {
         Denuncia denucia = getItem(position);
 
         TextView textView1 = (TextView)itemView.findViewById(R.id.nombreA);
-        textView1.setText(denucia.nombreAgresor);
+        textView1.setText("Agresor: " + denucia.nombreAgresor);
 
         TextView textView2 = (TextView)itemView.findViewById(R.id.nombreV);
-        textView2.setText(denucia.nombreVictima);
+        textView2.setText("Victima: "+denucia.nombreVictima);
 
         TextView textView3 = (TextView)itemView.findViewById(R.id.infoAgre);
         textView3.setText(denucia.infoAgrecion);
