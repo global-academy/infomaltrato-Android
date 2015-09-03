@@ -77,6 +77,16 @@ public class HacerUnaDenunciaFragment extends Fragment {
                                               }
                                           }
         );
+
+        Button denuncias = (Button) view.findViewById(R.id.button2);
+        denuncias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), DenunciasActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+
         return view;
     }
 

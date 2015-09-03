@@ -4,26 +4,45 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.parse.ParseObject;
 
 import java.util.ArrayList;
 
 
 public class FormularioActivity extends Activity {
-    private String questions[];
-    private ListView listView;
-    private ArrayList<Denuncia> denuncias;
+    private EditText nombreA;
+    private EditText nombreV;
+    private EditText infoAgre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
-        denuncias = new ArrayList<Denuncia>();
-        denuncias.add(new Denuncia("Juan Perez","Marcela Mamani","Mucha volencia en la casa"));
-        listView = (ListView)findViewById(R.id.listView);
-        DenunciasAdapter adapter = new DenunciasAdapter(this,R.layout.denuncia, denuncias);
-        listView.setAdapter(adapter);
 
+        nombreA = (EditText) findViewById(R.id.nombreA);
+        nombreV = (EditText) findViewById(R.id.nombreV);
+        infoAgre = (EditText) findViewById(R.id.infoAgre);
+
+        Button registrar = (Button) findViewById(R.id.registrarDenuncia);
+        registrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ParseObject report = new ParseObject("Denuncia");
+                report.put("descripcion", infoAgre.getText().toString());
+                report.put("nombre_agresor", nombreA.getText().toString());
+                report.put("nombre_victima", nombreV.getText().toString());
+                report.saveInBackground();
+
+                Toast.makeText(FormularioActivity.this, "Denuncia Registrada", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

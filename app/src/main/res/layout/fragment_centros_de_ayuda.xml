@@ -8,11 +8,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Dirección:    Costanera esquina La Paz y Hamiraya, Cochabamba-Bolivia
-Telf:    (591 - 4) 4228928
-Fax:     (591-4) 4251551
-Email:   ojmujer@entelnet.bo
-Web:     http://ojmbolivia.org/"
+        android:text="Dirección:\nCostanera esquina La Paz y Hamiraya, Cochabamba-Bolivia\n\n
+Telf:  (591 4) 4228928\n
+Fax:   (591 4) 4251551\n
+Email: ojmujer@entelnet.bo\n
+Web:   http://ojmbolivia.org/"
         android:id="@+id/textView"
         android:textSize="20dp"
         android:layout_marginTop="10dp"
@@ -24,7 +24,7 @@ Web:     http://ojmbolivia.org/"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="OFICINA JURUDICA PARA LA MUJER"
+        android:text="OFICINA JURIDICA PARA LA MUJER"
         android:id="@+id/textView2"
         android:layout_marginTop="10dp"
         android:layout_alignParentTop="true"

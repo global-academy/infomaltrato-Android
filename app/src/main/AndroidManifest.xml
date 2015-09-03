@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.informaltratom" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:name=".InfoMaltratoMApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -27,6 +31,10 @@
         <activity
             android:name=".FormularioActivity"
             android:label="@string/title_activity_formulario" >
+        </activity>
+        <activity
+            android:name=".DenunciasActivity"
+            android:label="@string/title_activity_denuncias" >
         </activity>
     </application>
 
